@@ -14,29 +14,23 @@
       <form class="form-selector">
 
         <div class="form-group">
-        <label><h4>Hotels</h4></label>
-        <select class="change">
-          {% for hotel in hotels%}
-          <option name ="{{hotel.name}}">{{hotel.name}}</option>
-          {% endfor %}
+        <label><h4>Hotels</h4></label><span class="hotel-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></br>  
+        <select class="change hotel">
+          
         </select>
         </div>
 
         <div class="form-group">
-        <label><h4>Restaurants</h4></label>  
-        <select class="change">
-          {% for restaurant in restaurants%}
-          <option name ="{{restaurant.name}}">{{restaurant.name}}</option> 
-          {% endfor %}
+        <label><h4>Restaurants</h4></label><span class="restaurants-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></br>  
+        <select class="change restaurants">
+         
         </select>
         </div>
 
         <div class="form-group">
-        <label><h4>Activities</h4></label>
-        <select class="change">
-          {% for activity in activities%}
-          <option name ="{{activity.name}}">{{activity.name}}</option>
-          {% endfor %}  
+        <label><h4>Activities</h4></label><span class="activities-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></br>
+        <select class="change activities">
+          
         </select>
         </div>
         </div>
@@ -60,24 +54,28 @@
     <p class="badge">7</p>
     <p class="badge">8</p> -->
     <p class="badge">+</p>
-<hr>
+
     <!-- Selections -->
     <section class="selections">
       <h4>My Hotel</h4>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
-      <h4>My Restaurants</h4>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
+      <ul id="my-hotel"></ul>
+       
+      <h4 >My Restaurants</h4>
+      <ul id="my-restaurants"></ul>
+     
       <h4>My Activities</h4>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
-      <li>Test</li> <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
+      <ul id="my-activities"></ul>
+
     </section>
     </div>
   </div>
+
+  <script>
+  {% autoescape false %}
+  var hotels = {{ hotels | json }};
+  var restaurants = {{ restaurants | json }};
+  var activities = {{ activities | json }};
+  {% endautoescape %}
+</script>
 
 {% endblock %}
