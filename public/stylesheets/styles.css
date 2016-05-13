@@ -6,49 +6,19 @@ body {
   background-color: #AFDAD6;
   font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; }
 
-/*
-.select-style{
-  border: 1px solid #ccc;
-  width: 130%;
-  border-radius: 3px;
-  overflow: hidden;
-  background: #ccc;
-}
-
-.select-style select{
-  padding: 5px 8x;
-  border: none;
-  box-shadow: none;
-  background: transparent;
-  background-image: none;
-  -webkit-appearance: none;
-}
-
-.select-style select:focus{
-  outline:none;
-}*/
 label, h4 {
   color: #fe6c3c;
   margin: 0 0 5px 0;
   font-size: 17px; }
 
 li {
-  display: inline;
+  /*  display: inline;*/
   padding: 0 15px 0 0;
   list-style-type: none; }
 
 title {
   color: #fe6c3c; }
 
-/*.select_style .change{
-  display: block;
-  width: 80%;
-}*/
-/*.navbar-default {
-   background-color: #22757B ;
-   border-color: $primary-clear;
-   color: $primary-clear;
-}*/
 p, h2 {
   display: inline; }
 
@@ -96,6 +66,12 @@ hr {
 .glyphicon-remove-circle {
   border-radius: 50%;
   box-shadow: 3px 3px 3px #888888; }
+
+.glyphicon-plus {
+  color: #F75850;
+  border: solid #F75850 .5px;
+  border-radius: 50%;
+  margin: 0 0 0 15px; }
 
 .selections {
   text-align: left; }

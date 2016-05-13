@@ -14,21 +14,21 @@
       <form class="form-selector">
 
         <div class="form-group">
-        <label><h4>Hotels</h4></label><span class="hotel-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></br>  
+        <label><h4>Hotels</h4></label><a href="#"><span class="hotel-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></a></br>  
         <select class="change hotel">
           
         </select>
         </div>
 
         <div class="form-group">
-        <label><h4>Restaurants</h4></label><span class="restaurants-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></br>  
+        <label><h4>Restaurants</h4></label><a href="#"><span class="restaurants-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></a></br>  
         <select class="change restaurants">
          
         </select>
         </div>
 
         <div class="form-group">
-        <label><h4>Activities</h4></label><span class="activities-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></br>
+        <label><h4>Activities</h4></label><a href="#"><span class="activities-button glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></a></br>
         <select class="change activities">
           
         </select>
@@ -59,7 +59,7 @@
     <section class="selections">
       <h4>My Hotel</h4>
       <ul id="my-hotel"></ul>
-       
+
       <h4 >My Restaurants</h4>
       <ul id="my-restaurants"></ul>
      
@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <script>
+<script>
   {% autoescape false %}
   var hotels = {{ hotels | json }};
   var restaurants = {{ restaurants | json }};
